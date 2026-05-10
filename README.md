@@ -3,8 +3,6 @@
 Aplikasi untuk mencari profil dan repository GitHub.
 Built with React + TypeScript.
 
-## Demo
-[link Vercel kamu]
 
 ## Fitur
 - Cari user GitHub by username
