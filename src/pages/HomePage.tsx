@@ -67,7 +67,7 @@ const HomePage = () => {
 
            
                 {/* Skeleton */}
-                {loading && loadingRepos ? (
+               {(loading || loadingRepos) ? 
                     <div className="space-y-5">
 
                         {/* Profile Skeleton */}
@@ -121,7 +121,7 @@ const HomePage = () => {
                         ))}
 
                     </div>
-                ) : (
+                 : (
                     <>
                         {/* Profile */}
                         <Card className="bg-[#1a1a1a] border-zinc-800 rounded-2xl">
@@ -130,7 +130,7 @@ const HomePage = () => {
 
                                     {users.map((item) => (
                                         <div
-                                            // key={item.id}
+                                             key={item.id}
                                             className="flex items-center gap-5"
                                         >
                                             <img
@@ -196,7 +196,8 @@ const HomePage = () => {
 
                         {repos.map((item) => (
 
-                            <div className="space-y-4">
+                            <div className="space-y-4" key={item.id}>
+                                
 
                                 <Card className="bg-[#1a1a1a] border-zinc-800 rounded-xl">
                                     <CardContent className="p-5">

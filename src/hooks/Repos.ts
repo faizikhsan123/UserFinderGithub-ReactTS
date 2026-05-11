@@ -19,7 +19,7 @@ const useGetRepos = () => {
       if (error.response?.status === 404) {
         setErrorRepos("User not found");
       }
-      if (error.response?.status === 403) {
+     else if (error.response?.status === 403) {
         setErrorRepos("Rate limit exceeded");
       }
       else setErrorRepos(error.message);
